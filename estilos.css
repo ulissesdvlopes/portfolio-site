@@ -7,3 +7,113 @@
 	--color-detail: #6FC3DF;
 	--color-detail-bg: #B7E1EF;
 }
+
+/* estilos gerais */
+
+h1, h2, h3 {
+	font-family: 'VT323', monospace;
+	font-style: normal;
+  	font-weight: 400;
+}
+
+body {
+	font-family: 'Roboto Mono', monospace;
+}
+
+
+/* header */
+
+h1 {
+	color: var(--color-light);
+	font-size: 2.375rem;
+}
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	align-content: space-between;
+	background-color: var(--color-dark);
+	padding: 1rem;
+	box-shadow: 0 3px 5px var(--color-detail);
+	position: fixed;
+	width: 100%;
+	height: 7rem;
+	
+}
+
+.header-top {
+	/* retirar classe com scroll */
+	background-color: rgba(0,0,0,0);
+	box-shadow: 0 0 0;
+}
+
+header ul {
+	display: flex;
+	justify-content: space-between;
+	font-family: 'VT323', monospace;
+	font-size: 1.5rem;
+	color: var(--color-detail);
+}
+
+
+header li {
+	padding: 0 .5rem;
+}
+
+header ul > li:not(:first-child) {
+	border-left: 1px solid rgba(111,195,223,.5);
+}
+
+.active {
+	color: var(--color-active);
+	border-bottom: 2px solid var(--color-active);
+}
+
+
+/* home */
+
+#home {
+	height: 100vh;
+	background-color: var(--color-dark);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-active);
+	background-image: url(img/the_grid_by_doved-d4jugw9.jpg);
+}
+
+#home > div {
+	width: 16.25rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center
+}
+
+#home p {
+	font-size: 1.125rem;
+}
+
+#home a {
+	font-size: 1.25rem;
+	color: var(--color-light);
+	background-color: var(--color-action);
+	padding:  .75rem;
+	border-radius: 7px;
+	margin-top: 1.5rem;
+	box-shadow: 3px 3px 3px var(--color-detail);
+}
+
+
+/* sobre */
+
+
+/* portfolio */
+
+#portfolio h3 {
+	font-family: 'Roboto Mono', monospace;
+}
+
+
+/* contato */
