@@ -18,8 +18,9 @@ h1, h2, h3 {
 
 body {
 	font-family: 'Roboto Mono', monospace;
+	/* não funciona, faze mais testes depois */
+	scroll-behavior: smooth;
 }
-
 
 /* header */
 
@@ -68,7 +69,25 @@ header ul > li:not(:first-child) {
 
 .active {
 	color: var(--color-active);
-	border-bottom: 2px solid var(--color-active);
+	position: relative;
+	/*border-bottom: 2px solid var(--color-active);*/
+}
+
+.active::before {
+	content: '';
+	position: absolute;
+	background-color: var(--color-active);
+	width: 100%;
+	top: 100%;
+	left: 0;
+	opacity: 80%;
+	height: 2px;
+	transition: left .5s ease-in-out, width .5s ease-in-out;
+}
+
+.removing-bar::before {
+	left: 50%;
+	width: 0;
 }
 
 
@@ -99,7 +118,7 @@ header ul > li:not(:first-child) {
 	font-size: 1.25rem;
 	color: var(--color-light);
 	background-color: var(--color-action);
-	padding:  .75rem;
+	padding:  .75rem 1.25rem;
 	border-radius: 7px;
 	margin-top: 1.5rem;
 	box-shadow: 3px 3px 3px var(--color-detail);
