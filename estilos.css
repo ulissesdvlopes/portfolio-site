@@ -6,9 +6,15 @@
 	--color-active: #FFE64D;
 	--color-detail: #6FC3DF;
 	--color-detail-bg: #B7E1EF;
+	
+	--header-height: 7rem;
 }
 
 /* estilos gerais */
+
+html {
+	scroll-behavior: smooth;
+}
 
 h1, h2, h3 {
 	font-family: 'VT323', monospace;
@@ -17,10 +23,19 @@ h1, h2, h3 {
 }
 
 body {
-	font-family: 'Roboto Mono', monospace;
-	/* não funciona, faze mais testes depois */
-	scroll-behavior: smooth;
+	font-family: 'Roboto Mono', monospace;	
 }
+
+section {
+	min-height: 100vh;
+}
+
+.container {
+	padding-top: calc(var(--header-height) + 2rem);
+	max-width: 80%;
+	margin: auto;
+}
+
 
 /* header */
 
@@ -40,7 +55,7 @@ header {
 	box-shadow: 0 3px 5px var(--color-detail);
 	position: fixed;
 	width: 100%;
-	height: 7rem;
+	height: var(--header-height);
 	
 }
 
@@ -54,13 +69,14 @@ header ul {
 	display: flex;
 	justify-content: space-between;
 	font-family: 'VT323', monospace;
+	/* aumentar pra 1.5rem no primeiro breakpoint */
 	font-size: 1.5rem;
 	color: var(--color-detail);
 }
 
 
 header li {
-	padding: 0 .5rem;
+	padding: 0 2.5vw;
 }
 
 header ul > li:not(:first-child) {
@@ -84,6 +100,7 @@ header ul > li:not(:first-child) {
 	height: 2px;
 	transition: left .5s ease-in-out, width .5s ease-in-out;
 }
+
 
 .removing-bar::before {
 	left: 50%;
@@ -127,8 +144,43 @@ header ul > li:not(:first-child) {
 
 /* sobre */
 
+#sobre {
+	background-color: var(--color-detail-bg);
+}
+
+#sobre img {
+	max-width: 100%;
+	max-height: 960px;
+}
+
+.content-sobre{
+	padding-top: 1.5rem;
+	padding-bottom: 2rem;
+	line-height: 1.5rem;
+}
+
+#sobre h2, #sobre h3 {
+	text-align: center;
+}
+
+#sobre h2 {
+	font-size: 2.25rem;
+	margin-bottom: 1rem;
+}
+
+#sobre h3 {
+	font-size: 1.75rem;
+	margin: .75rem;
+	
+}
+
+
 
 /* portfolio */
+
+#portfolio {
+	background-color: var(--color-light);
+}
 
 #portfolio h3 {
 	font-family: 'Roboto Mono', monospace;
@@ -136,3 +188,25 @@ header ul > li:not(:first-child) {
 
 
 /* contato */
+
+#contato {
+	background-color: var(--color-action-bg);
+}
+
+
+
+/* 
+primeiro breakpoint 380
+
+header ul {
+	font-size 1.5rem
+} 
+header li {
+	padding: 0 3vw;
+}
+
+
+segundo breakpoint 580
+
+duas colunas no sobre
+*/
