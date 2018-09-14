@@ -303,3 +303,21 @@ button {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+
+input, textarea {
+	background-color: inherit;
+	border: 0;
+}
+
+input:focus
+{
+	outline:0;
+}
+
+textarea {
+	vertical-align:top;
+}
+
+textarea:focus {
+	outline: 0;
+}

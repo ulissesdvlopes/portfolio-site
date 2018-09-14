@@ -81,14 +81,22 @@
 
 	<section id="contato">
 		<div class="container">
-			<h2>Envie sua mensagem</h2>
 			<form>
-				<label for="nome">Nome</label>
-				<input id="nome" type="text" name="nome"><br>
-				<label for="email">E-mail</label>
-				<input id="email" type="email" name="email"><br>
-				<label for="mensagem">Mensagem</label>
-				<textarea id="mensagem" name="mensagem"></textarea><br>
+				<h2>Envie sua mensagem</h2>
+				
+				<div class="field">
+					<input id="nome" type="text" name="nome" onfocusout="changeFocus(event)">
+					<label for="nome">Nome</label>
+				</div>
+				<div class="field">
+					<input id="email" type="email" name="email" onfocusout="changeFocus(event)">
+					<label for="email">Email</label>
+				</div>
+				<div class="field">
+					<textarea id="mensagem" name="mensagem" onfocusout="changeFocus(event)"></textarea>
+					<label for="mensagem">Mensagem</label>
+				</div>
+				
 				<button>Enviar</button>
 			</form>
 		</div>

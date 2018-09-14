@@ -23,3 +23,12 @@ nav.addEventListener('click', (event) => {
 	
 	animateBar(active[0], el);
 })
+
+function changeFocus(event) {
+	
+	if(event.target.value) {
+		console.log(event.target.value);
+		//não retornar com a label
+	}
+	
+}
