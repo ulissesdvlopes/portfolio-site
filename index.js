@@ -1,16 +1,24 @@
 let nav = document.getElementById('main-navigation');
 
-function animateBar(oldActiveEl, newActiveEl) {
+function changeFocus(event) {
 	
-	oldActiveEl.classList.add('removing-bar');
-	setTimeout(() => {
-		oldActiveEl.classList.remove('removing-bar');
-		oldActiveEl.classList.remove('active');
-		newActiveEl.classList.add('active')
-	}, 500)
+	let el = event.target;
+	
+	if(el.value) {
+		if(!el.classList.contains('done')) {
+			el.classList.add('done');
+		}
+	} 
+	else {
+		if(el.classList.contains('done')) {
+			el.classList.remove('done');
+		}
+	}
 	
 }
 
+//evento PLACEHOLDER
+// capturar pelo scroll usando a intersection observer api
 nav.addEventListener('click', (event) => {
 	
 	let active = document.getElementsByClassName('active');
@@ -21,14 +29,7 @@ nav.addEventListener('click', (event) => {
 	
 	if(!el.matches('.nav-item')) return;
 	
-	animateBar(active[0], el);
-})
-
-function changeFocus(event) {
+	document.querySelector('.active').classList.remove('active');
 	
-	if(event.target.value) {
-		console.log(event.target.value);
-		//não retornar com a label
-	}
-	
-}
+	el.classList.add('active');
+});
