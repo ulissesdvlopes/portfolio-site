@@ -202,7 +202,6 @@ header a::before {
 .card {
 	background-color: var(--color-action);
 	color: var(--color-light);
-	margin-bottom: 2.25rem;
 	border-radius: 7px;
 	position: relative;
 	display: flex;
@@ -220,6 +219,14 @@ header a::before {
 
 .card p {
 	opacity: 0;
+}
+
+#portfolio .container {
+	max-width: 750px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 250px);
+	grid-gap: 2.5rem;
+	justify-content: center;
 }
 
 
@@ -244,11 +251,14 @@ input, textarea {
 	width: 100%;
 }
 
+
 #contato form {
 	background-color: var(--color-dark);
 	border-radius: 7px;
 	padding: 1.25rem 1.5rem;
 	box-shadow: 3px 5px 5px var(--color-detail);
+	max-width: 700px;
+	margin: auto;
 }
 
 .field {
