@@ -33,3 +33,13 @@ nav.addEventListener('click', (event) => {
 	
 	el.classList.add('active');
 });
+
+let portfolio = document.querySelector('#portfolio');
+
+portfolio.addEventListener('click', (event) => {
+	let el = event.target;
+	if(!el.matches('.btn-open') && !el.matches('.btn-open span')) return;
+	descricao = el.closest('.descricao-container');
+	descricao.classList.toggle('open');
+	
+});
