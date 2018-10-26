@@ -298,6 +298,7 @@ header a::before {
 	grid-template-columns: repeat(auto-fill, 250px);
 	grid-gap: 2.5rem;
 	justify-content: center;
+	margin: 0 2.5rem;
 }
 
 
@@ -328,7 +329,7 @@ input, textarea {
 	border-radius: 7px;
 	padding: 1.25rem 1.5rem;
 	box-shadow: 3px 5px 5px var(--color-detail);
-	max-width: 700px;
+	max-width: 500px;
 	margin: auto;
 }
 
@@ -366,19 +367,19 @@ input:focus + label, textarea:focus + label {
 	opacity: 0;
 }
 
+@media (min-width: 380px) {
 
-/* 
-primeiro breakpoint 380
-
-header ul {
-	font-size 1.5rem
-} 
-header li {
-	padding: 0 3vw;
+	header ul {
+		font-size: 1.6rem
+	} 
+	header li {
+		padding: 0 3.5vw;
+	}
 }
 
+/* 
 
-segundo breakpoint 580
+segundo breakpoint 600
 
 duas colunas no sobre
 */
