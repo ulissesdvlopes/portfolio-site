@@ -143,6 +143,7 @@ header a::before {
 
 #home p {
 	font-size: 1.125rem;
+	font-weight: 500;
 }
 
 #home a {
