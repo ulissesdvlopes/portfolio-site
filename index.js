@@ -61,11 +61,21 @@ observer.observe(home);
 observer.observe(sobre);
 
 
-//alterar para o clique em qualquer área da foto
+
 portfolio.addEventListener('click', (event) => {
-	let el = event.target;
-	if(!el.matches('.btn-open') && !el.matches('.btn-open span')) return;
-	descricao = el.closest('.descricao-container');
-	descricao.classList.toggle('open');
-	
+	let el = event.target;	
+	if(el.matches('img')) {
+		descricao = el.parentElement.lastElementChild;
+		descricao.classList.toggle('open');
+		return;
+	}
 });
+
+let descricoes = document.querySelectorAll('.descricao-container');
+
+descricoes.forEach((descricao) => {
+	descricao.addEventListener('click', () => {
+		descricao.classList.toggle('open');
+	});
+});
+

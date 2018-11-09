@@ -88,6 +88,10 @@ header a {
 	transition: color .5s;
 }
 
+header a:hover {
+	color: var(--color-action);
+}
+
 header a::before {
 	content: '';
 	position: absolute;
@@ -149,6 +153,11 @@ header a::before {
 	border-radius: 7px;
 	margin-top: 1.5rem;
 	box-shadow: 3px 3px 3px var(--color-detail);
+	transition: transform 0.6s;
+}
+
+#home a:hover {
+	transform: scale(1.1);
 }
 
 
@@ -378,9 +387,15 @@ input, textarea {
 	color: var(--color-light);
 	background-color: transparent;
 	border: 1px solid var(--color-light);
-	padding: .25rem 1rem;
+	padding: .5rem 1rem;
 	border-radius: 7px;
 	margin-top: 1.25rem;
+	transition: all 0.6s;
+}
+
+#contato button:hover {
+	background-color: var(--color-light);
+	color: var(--color-dark);
 }
 
 input:focus + label, textarea:focus + label {
@@ -390,6 +405,9 @@ input:focus + label, textarea:focus + label {
 .done + label {
 	opacity: 0;
 }
+
+
+/* Media queries */
 
 @media (min-width: 380px) {
 
