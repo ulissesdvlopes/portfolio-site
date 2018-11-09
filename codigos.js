@@ -26,9 +26,8 @@ function changeFocus(event) {
 
 function changeActiveClass(id) {
 	
-	document.querySelector('.active').classList.remove('active');
 	el = document.querySelector(`#nav-${id}`);
-	el.classList.add('active');
+	el.classList.toggle('active');
 	
 }
 
@@ -40,19 +39,22 @@ var options = {
 
 var observer = new IntersectionObserver(callback, options);
 
+var firstTime = true;
+
 function callback(entries, observer) {
 	entries.forEach(entry => {
-		if(entry.isIntersecting) {
-			changeActiveClass(entry.target.id);
+		if(!firstTime) {
+			if(entry.isIntersecting) {
+				changeActiveClass(entry.target.id);
+			}
+
+			if(entry.target.id == 'home') {
+				header.classList.toggle('header-top');
+			}
 		}
-		
-		if(entry.target.id == 'home') {
-			if(entry.isIntersecting)
-				header.classList.add('header-top');
-			else
-				header.classList.remove('header-top');
-		}
-  });
+
+	});
+	firstTime = false;
 }
 
 observer.observe(portfolio);
