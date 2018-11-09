@@ -58,6 +58,7 @@ header {
 	width: 100%;
 	height: var(--header-height);
 	z-index: 100;
+	transition: all .6s;
 }
 
 .header-top {

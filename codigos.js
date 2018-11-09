@@ -44,9 +44,9 @@ var firstTime = true;
 function callback(entries, observer) {
 	entries.forEach(entry => {
 		if(!firstTime) {
-			if(entry.isIntersecting) {
-				changeActiveClass(entry.target.id);
-			}
+			
+			changeActiveClass(entry.target.id);
+			
 
 			if(entry.target.id == 'home') {
 				header.classList.toggle('header-top');
