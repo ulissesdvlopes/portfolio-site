@@ -142,7 +142,8 @@ header a::before {
 	margin-top: 6rem;
 }
 
-#home p {
+#home h2 {
+	font-family: 'Roboto Mono';
 	font-size: 1.125rem;
 	font-weight: 500;
 }

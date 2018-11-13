@@ -5,7 +5,10 @@ let contato = document.querySelector('#contato');
 let sobre = document.querySelector('#sobre');
 let header = document.querySelector('header');
 
-//usando no form
+document.querySelector('#nome').addEventListener('focusout', changeFocus);
+document.querySelector('#email').addEventListener('focusout', changeFocus);
+document.querySelector('#mensagem').addEventListener('focusout', changeFocus);
+
 function changeFocus(event) {
 	
 	let el = event.target;
